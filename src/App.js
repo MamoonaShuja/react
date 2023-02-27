@@ -16,10 +16,29 @@ export function App() {
     </>
   );
 }
-export function AppTwo(){
+export function AppTwo(props){
     return (
         <>
-            <p>I am function 2</p>
+            <table className="table table-stripped">
+                <thead>
+                    <tr>
+                        <th>Sr #</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        props.users.map((user, index) => (
+                        <tr key={index}>
+                            <td>{index+1}</td>
+                            <td>{user.name}</td>
+                            <td>{user.lname}</td>
+                        </tr>
+                    ))
+                    }
+                </tbody>
+            </table>
         </>
     )
 }

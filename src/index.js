@@ -7,13 +7,32 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const users = [
+    {
+        'name' : "Mamoona",
+        "lname" : "Shuja"
+    },
+    {
+        'name' : "Ammar",
+        "lname" : "Hasan"
+    },
+    {
+        'name' : "Mubashir",
+        "lname" : "Ali"
+    },
+    {
+        'name' : "Muzamil",
+        "lname" : "Shakeel"
+    }
+
+]
 
 
 root.render(
   <React.StrictMode>
       <Header />
-    <App />
-    <AppTwo />
+    <App  />
+    <AppTwo users={users} />
   </React.StrictMode>
 );
 
